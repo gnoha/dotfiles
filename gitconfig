@@ -1,0 +1,12 @@
+[alias]
+  st = status
+  co = checkout
+[format]
+  pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
+[log]
+  date = short
+[user]
+	email = brent.wheeldon@gmail.com
+	name = Brent Wheeldon
+[push]
+	default = simple
