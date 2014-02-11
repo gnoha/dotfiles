@@ -7,3 +7,11 @@ $ ln -s {`pwd`/dotfiles/,~/.}gitconfig
 $ ln -s {`pwd`/dotfiles/,~/.}inputrc
 $ ln -s {`pwd`/dotfiles/,~/.}vimrc
 ```
+
+Add your git user details to `~/.gitconfig.local`:
+
+```
+[user]
+  email = brent.wheeldon@gmail.com
+  name = Brent Wheeldon
+```
