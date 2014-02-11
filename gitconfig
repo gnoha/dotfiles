@@ -9,4 +9,4 @@
 	email = brent.wheeldon@gmail.com
 	name = Brent Wheeldon
 [push]
-	default = simple
+  default = simple
