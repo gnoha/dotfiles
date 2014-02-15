@@ -12,6 +12,6 @@ Add your git user details to `~/.gitconfig.local`:
 
 ```
 [user]
-  email = brent.wheeldon@gmail.com
-  name = Brent Wheeldon
+  email = <email>
+  name = <name>
 ```
