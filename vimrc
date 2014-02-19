@@ -1,5 +1,4 @@
 set nocompatible
-filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -64,9 +63,9 @@ autocmd BufRead,BufNewFile *.json set filetype=javascript
 
 let NERDSpaceDelims = 1
 
-
-
-
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
 set guifont=Menlo:h16
 set guioptions-=T                  " Remove GUI toolbar
