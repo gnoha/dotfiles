@@ -58,8 +58,15 @@ autocmd BufReadPost .git/index set nolist
 
 let g:gundo_close_on_revert = 1
 
-" Highlight JSON files as javascript
 autocmd BufRead,BufNewFile *.json set filetype=javascript
+
+function! StripTrailingWhitespace()
+  let save_cursor = getpos(".")
+  %s/\s\+$//e
+  call setpos('.', save_cursor)
+endfunction
+
+autocmd BufWritePre *.* call StripTrailingWhitespace()
 
 let NERDSpaceDelims = 1
 
