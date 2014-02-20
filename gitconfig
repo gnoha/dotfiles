@@ -11,3 +11,5 @@
   path = ~/.gitconfig.local
 [core]
   editor = mvim -f
+[color]
+	ui = true
