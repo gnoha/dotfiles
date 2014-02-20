@@ -15,6 +15,7 @@ export HISTCONTROL=ignoredups
 
 alias editaliases="vim ~/.bash_profile && reload"
 alias gut=git
+alias heroky=heroku
 alias ht="cd ~/workspace/hightower"
 alias ll="ls -al"
 alias reload=". ~/.bash_profile"
