@@ -21,4 +21,10 @@ alias reload=". ~/.bash_profile"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source ~/.profile
+if [ -f ~/profile ]; then
+  . ~/bash_profile.local
+fi
+
+if [ -f ~/bash_profile.local ]; then
+  . ~/bash_profile.local
+fi

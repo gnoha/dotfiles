@@ -183,3 +183,7 @@ if exists("+showtabline")
 endif
 
 let ruby_operators=1
+
+if filereadable(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
