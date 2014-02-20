@@ -2,3 +2,4 @@
 --type-set=scss=.scss
 
 --ignore-dir=tmp
+--ignore-file=is:tags
