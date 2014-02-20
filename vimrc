@@ -40,6 +40,7 @@ cabbrev Wq wq
 map \           :NERDTreeToggle<CR>
 map \|          :NERDTreeFind<CR>
 map <D-N>       :CtrlP<CR>
+map <leader>f   :CtrlP<CR>
 map <leader>/   <plug>NERDCommenterToggle
 map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
