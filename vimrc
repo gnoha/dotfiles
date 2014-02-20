@@ -52,6 +52,7 @@ au FocusLost * silent! wa
 
 syntax enable
 set background=dark
+let g:solarized_termcolors = 256
 colorscheme solarized
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
