@@ -1,5 +1,6 @@
 --type-set=haml=.haml
 --type-set=scss=.scss
+--type-set=coffee=.coffee
 
 --ignore-dir=tmp
 --ignore-file=is:tags
