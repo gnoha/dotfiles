@@ -1,6 +1,9 @@
 [alias]
-  st = status
+  ca = commit --amend
   co = checkout
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  st = status
+  up = !git fetch origin && git rebase origin/master
 [format]
   pretty = format:%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s
 [log]
