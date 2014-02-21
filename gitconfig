@@ -15,4 +15,4 @@
 [core]
   editor = vim
 [color]
-	ui = true
+  ui = true
