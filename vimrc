@@ -5,6 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'BrentWheeldon/ruby-matchit'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Peeja/vim-cdo'
 Bundle 'airblade/vim-gitgutter'
