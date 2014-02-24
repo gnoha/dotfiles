@@ -187,6 +187,8 @@ endif
 
 let ruby_operators=1
 
+let g:ctrlp_use_caching = 0
+
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
