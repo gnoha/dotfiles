@@ -3,6 +3,10 @@ parse_git_branch() {
 }
 export -f parse_git_branch
 
+run_test() {
+  rake test:single TEST=$1
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
@@ -22,6 +26,7 @@ alias ht="cd ~/workspace/hightower"
 alias ll="ls -al"
 alias gitprune="git remote prune origin && git prune"
 alias reload=". ~/.bash_profile"
+alias t=run_test
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
