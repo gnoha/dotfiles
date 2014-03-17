@@ -5,7 +5,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'BrentWheeldon/ruby-matchit'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Peeja/vim-cdo'
 Bundle 'airblade/vim-gitgutter'
@@ -192,3 +191,5 @@ let g:ctrlp_use_caching = 0
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+runtime macros/matchit.vim
