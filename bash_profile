@@ -27,6 +27,11 @@ alias ll="ls -al"
 alias gitprune="git remote prune origin && git prune"
 alias reload=". ~/.bash_profile"
 alias t=run_test
+alias z="zeus rspec"
+alias zake="zeus rake"
+alias zerver="zeus s"
+alias zonsole="zeus c"
+alias zspec="zeus rspec"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
