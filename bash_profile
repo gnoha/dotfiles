@@ -18,13 +18,15 @@ export EDITOR=mvim
 export HISTCONTROL=ignoredups
 
 alias editaliases="vim ~/.bash_profile && reload"
+alias fixdb="rake db:drop db:create db:migrate db:seed && rake db:sample_data db:test:prepare"
+alias gitprune="git remote prune origin && git prune"
 alias got=git
+alias gpr="git fetch && git rebase origin/master"
 alias gtx=gitx
 alias gut=git
 alias heroky=heroku
 alias ht="cd ~/workspace/hightower"
 alias ll="ls -al"
-alias gitprune="git remote prune origin && git prune"
 alias reload=". ~/.bash_profile"
 alias t=run_test
 alias z="zeus rspec"
