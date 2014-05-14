@@ -7,6 +7,11 @@ run_test() {
   rake test:single TEST=$1
 }
 
+run_loop() {
+  trap "exit" INT
+  for i in {1..10}; do $1; done
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
@@ -27,6 +32,7 @@ alias gut=git
 alias heroky=heroku
 alias ht="cd ~/workspace/hightower"
 alias ll="ls -al"
+alias loopy=run_loop
 alias reload=". ~/.bash_profile"
 alias t=run_test
 alias z="zeus rspec"
