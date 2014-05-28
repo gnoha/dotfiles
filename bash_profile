@@ -34,6 +34,7 @@ alias ht="cd ~/workspace/hightower"
 alias ll="ls -al"
 alias loopy=run_loop
 alias reload=". ~/.bash_profile"
+alias shutupvim="rm /var/tmp/*.swp"
 alias t=run_test
 alias z="zeus rspec"
 alias zake="zeus rake"
