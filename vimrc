@@ -11,7 +11,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
+Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
@@ -39,8 +39,8 @@ cabbrev Wq wq
 
 map \           :NERDTreeToggle<CR>
 map \|          :NERDTreeFind<CR>
-map <D-N>       :CtrlP<CR>
-map <leader>f   :CtrlP<CR>
+map <D-N>       :CommandT<CR>
+map <leader>f   :CommandT<CR>
 map <leader>/   <plug>NERDCommenterToggle
 map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
@@ -132,6 +132,9 @@ if $TERM == 'screen-256color'
   set t_RV=[>c
 endif
 
+let g:CommandTWildIgnore=&wildignore . ",app/assets/images/paperclip/**/*,node_modules/**/*"
+let g:CommandTMaxHeight=10
+
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
 
@@ -185,9 +188,6 @@ if exists("+showtabline")
 endif
 
 let ruby_operators=1
-
-let g:ctrlp_use_caching = 0
-let g:ctrlp_custom_ignore = '^node_modules\|\.log$'
 
 if filereadable(glob("~/.vimrc.local"))
   source ~/.vimrc.local

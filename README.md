@@ -6,6 +6,11 @@ $ ln -s {`pwd`/dotfiles/,~/.}ackrc
 $ ln -s {`pwd`/dotfiles/,~/.}gitconfig
 $ ln -s {`pwd`/dotfiles/,~/.}inputrc
 $ ln -s {`pwd`/dotfiles/,~/.}vimrc
+$ cd cd ~/.vim/bundle/command-t/ruby/command-t
+$ make clean
+$ rvm use system
+$ ruby extconf.rb
+$ make
 ```
 
 Add your git user details to `~/.gitconfig.local`:
