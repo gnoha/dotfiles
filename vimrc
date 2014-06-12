@@ -10,6 +10,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'Peeja/vim-cdo'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'jgdavey/vim-blockle'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mileszs/ack.vim'
