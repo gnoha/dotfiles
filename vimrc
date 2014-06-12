@@ -12,7 +12,6 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
@@ -30,6 +29,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/nextval'
 Bundle 'vim-scripts/regreplop.vim'
+Bundle 'wincent/Command-T'
 
 let mapleader = ","
 
