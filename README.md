@@ -6,10 +6,9 @@ $ ln -s {`pwd`/dotfiles/,~/.}ackrc
 $ ln -s {`pwd`/dotfiles/,~/.}gitconfig
 $ ln -s {`pwd`/dotfiles/,~/.}inputrc
 $ ln -s {`pwd`/dotfiles/,~/.}vimrc
-$ cd cd ~/.vim/bundle/command-t/ruby/command-t
+$ cd ~/.vim/bundle/command-t/ruby/command-t
 $ make clean
-$ rvm use system
-$ ruby extconf.rb
+$ /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
 $ make
 ```
 
