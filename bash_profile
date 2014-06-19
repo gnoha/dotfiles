@@ -3,10 +3,6 @@ parse_git_branch() {
 }
 export -f parse_git_branch
 
-run_test() {
-  rake test:single TEST=$1
-}
-
 run_loop() {
   trap "exit" INT
   for i in {1..10}; do $1; done
@@ -35,7 +31,6 @@ alias ll="ls -al"
 alias loopy=run_loop
 alias reload=". ~/.bash_profile"
 alias shutupvim="rm /var/tmp/*.swp"
-alias t=run_test
 alias z="zeus rspec"
 alias zake="zeus rake"
 alias zerver="zeus s"
