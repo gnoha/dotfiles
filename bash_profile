@@ -17,6 +17,7 @@ export PS1="\[\e[00;32m\]\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;36m\]\W\[\e[0
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export EDITOR=mvim
 export HISTCONTROL=ignoredups
+export HISTFILESIZE=5000
 
 alias editaliases="vim ~/.bash_profile && reload"
 alias fixdb="rake db:drop db:create db:migrate db:seed && rake db:sample_data"
