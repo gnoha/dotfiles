@@ -48,6 +48,7 @@ map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%"
 map <MiddleMouse>   <Nop>
 imap <MiddleMouse>  <Nop>
 map <leader>u :GundoToggle<CR>
+map Y yg_
 
 au FocusLost * silent! wa
 
