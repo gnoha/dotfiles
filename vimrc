@@ -196,3 +196,6 @@ if filereadable(glob("~/.vimrc.local"))
 endif
 
 runtime macros/matchit.vim
+
+highlight clear SignColumn
+call gitgutter#highlight#define_highlights()
