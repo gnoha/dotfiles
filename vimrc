@@ -5,7 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'Peeja/vim-cdo'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
@@ -78,7 +78,7 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-set guifont=Menlo:h16
+set guifont=Menlo\ for\ Powerline:h16
 set guioptions-=T                  " Remove GUI toolbar
 set guioptions-=e                  " Use text tab bar, not GUI
 set guioptions-=rL                 " Remove scrollbars
