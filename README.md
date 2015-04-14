@@ -15,6 +15,8 @@ $ /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby extconf.rb
 $ make
 ```
 
+Install the `Menlo for Powerline` font from [here](https://github.com/abertsch/Menlo-for-Powerline/blob/master/Menlo%20for%20Powerline.ttf) (just click raw, open the downloaded file, and then click "Install Font").
+
 Add your git user details to `~/.gitconfig.local`:
 
 ```
