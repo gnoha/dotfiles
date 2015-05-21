@@ -1,4 +1,5 @@
 ```
+$ brew install ack
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 $ git clone https://github.com/BrentWheeldon/dotfiles
 $ ln -s {`pwd`/dotfiles/,~/.}bash_profile
