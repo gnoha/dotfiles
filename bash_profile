@@ -18,7 +18,6 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export EDITOR=mvim
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
-export PHANTOMJS_BIN=/usr/local/bin/phantomjs
 
 alias editaliases="vim ~/.bash_profile && reload"
 alias fixdb="rake db:fix"
