@@ -21,7 +21,7 @@ export HISTFILESIZE=5000
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
 
 alias editaliases="vim ~/.bash_profile && reload"
-alias fixdb="rake db:drop db:create db:migrate db:seed && rake db:sample_data"
+alias fixdb="rake db:fix"
 alias gitprune="git remote prune origin && git prune"
 alias got=git
 alias gpr="git fetch && git rebase origin/master"
