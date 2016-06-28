@@ -31,6 +31,7 @@ alias ht="cd ~/workspace/hightower"
 alias ll="ls -alh"
 alias loopy=run_loop
 alias reload=". ~/.bash_profile"
+alias server="foreman start -f Procfile.dev"
 alias shutupvim="rm /var/tmp/*.swp"
 alias z="zeus rspec"
 alias zake="zeus rake"
