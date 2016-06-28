@@ -98,7 +98,6 @@ set shiftwidth=2                   " Width of autoindent
 set number                         " Line numbers
 set nowrap                         " No wrapping
 set backspace=indent,eol,start     " Let backspace work over anything.
-set wildignore+=tags,tmp/**        " Ignore tags when globbing.
 
 set list                           " Show whitespace
 set listchars=trail:·
@@ -136,7 +135,6 @@ if $TERM == 'screen-256color'
   set t_RV=[>c
 endif
 
-let g:CommandTWildIgnore=&wildignore . ",app/assets/images/paperclip/**/*,node_modules/**/*"
 let g:CommandTMaxHeight=10
 
 let g:Powerline_symbols = 'fancy'
