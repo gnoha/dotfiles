@@ -155,3 +155,5 @@ runtime macros/matchit.vim
 
 highlight clear SignColumn
 call gitgutter#highlight#define_highlights()
+
+let g:ackprg = 'ag --vimgrep'
