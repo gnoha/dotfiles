@@ -33,6 +33,7 @@ alias loopy=run_loop
 alias reload=". ~/.bash_profile"
 alias server="foreman start -f Procfile.dev"
 alias shutupvim="rm /var/tmp/*.swp"
+alias wp="./node_modules/.bin/webpack-dev-server --config config/webpack/development.config.js --content-base frontend"
 alias z="zeus rspec"
 alias zake="zeus rake"
 alias zerver="zeus s"
