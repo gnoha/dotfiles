@@ -60,6 +60,8 @@ set background=dark
 let g:solarized_termcolors = 256
 colorscheme solarized
 
+set vb    " Silence audio notifications
+
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost .git/index set nolist
 
