@@ -20,6 +20,7 @@ export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
 
 alias editaliases="vim ~/.bash_profile && reload"
+alias esl="node node_modules/eslint/bin/eslint.js"
 alias fixdb="rake db:fix"
 alias gitprune="git remote prune origin && git prune"
 alias got=git
