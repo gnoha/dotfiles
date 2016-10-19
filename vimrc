@@ -174,3 +174,5 @@ let g:rails_projections = {
   \ "spec/javascripts/*_spec.coffee": {
   \   "alternate": "frontend/javascripts/app/{}.coffee"
   \}}
+
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
