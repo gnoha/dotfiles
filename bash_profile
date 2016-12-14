@@ -12,6 +12,8 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+export PATH=/usr/local/bin/:$PATH:$HOME/Applications/Firefox.app/Contents/MacOS
+
 export CLICOLOR=1
 export PS1="\[\e[00;32m\]\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;36m\]\W\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[00;33m\]\$(parse_git_branch)\[\e[0m\]\[\e[00;37m\]\$ \[\e[0m\]"
 export LSCOLORS=ExFxCxDxBxegedabagacad
