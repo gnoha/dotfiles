@@ -36,11 +36,6 @@ alias server="foreman start -f Procfile.dev"
 alias shutupvim="rm /var/tmp/*.swp"
 alias vts="cd ~/workspace/viewthespace"
 alias wp="./node_modules/.bin/webpack-dev-server --config config/webpack/development.config.js --content-base frontend --host 0.0.0.0"
-alias z="zeus rspec"
-alias zake="zeus rake"
-alias zerver="zeus s"
-alias zonsole="zeus c"
-alias zspec="zeus rspec"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
