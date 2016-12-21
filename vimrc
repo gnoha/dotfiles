@@ -139,7 +139,7 @@ if $TERM == 'screen-256color'
   set t_RV=[>c
 endif
 
-let g:CommandTWildIgnore=&wildignore . ",node_modules/**/*"
+let g:CommandTWildIgnore=&wildignore . ",node_modules/**/*,vendor/assets/components/**/*,public/**/*"
 let g:CommandTMaxHeight=10
 
 let g:Powerline_symbols = 'fancy'
