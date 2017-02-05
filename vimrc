@@ -10,8 +10,10 @@ Bundle 'Peeja/vim-cdo'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'gaogao1030/vim-skim'
 Bundle 'jgdavey/vim-blockle'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'leafgarland/typescript-vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mkitt/tabline.vim'
 Bundle 'pangloss/vim-javascript'
@@ -83,7 +85,7 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 
-set guifont=Menlo\ for\ Powerline:h16
+set guifont=Menlo\ for\ Powerline:h12
 set guioptions-=T                  " Remove GUI toolbar
 set guioptions-=e                  " Use text tab bar, not GUI
 set guioptions-=rL                 " Remove scrollbars
@@ -140,7 +142,8 @@ if $TERM == 'screen-256color'
 endif
 
 let g:CommandTWildIgnore=&wildignore . ",node_modules/**/*,vendor/assets/components/**/*,public/**/*"
-let g:CommandTMaxHeight=10
+let g:CommandTMaxHeight=15
+let g:CommandTMatchWindowReverse=0
 
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
