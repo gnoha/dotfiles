@@ -10,7 +10,9 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # export EDITOR=mvim
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=5000
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
+alias vim='mvim -v'
 alias be='bundle exec'
 alias editaliases="vim ~/.bash_profile && reload"
 alias esl="node node_modules/eslint/bin/eslint.js"

@@ -5,27 +5,20 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'Peeja/vim-cdo'
+Bundle 'vim-airline/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'gaogao1030/vim-skim'
-Bundle 'jgdavey/vim-blockle'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'leafgarland/typescript-vim'
+Bundle 'chriskempson/base16'
+Bundle 'junegunn/fzf.vim'
+Bundle 'junegunn/goyo.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'mkitt/tabline.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'sjl/gundo.vim'
-Bundle 'tpope/vim-abolish'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-repeat'
@@ -35,7 +28,9 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/gitignore'
 Bundle 'vim-scripts/nextval'
 Bundle 'vim-scripts/regreplop.vim'
-Bundle 'wincent/Command-T'
+
+" VTS Commands
+command! Db edit db/structure.sql
 
 let mapleader = ","
 
@@ -45,29 +40,34 @@ cabbrev Wq wq
 
 map \           :NERDTreeToggle<CR>
 map \|          :NERDTreeFind<CR>
-map <D-N>       :CommandTFlush<CR>:CommandT<CR>
-map <leader>F   :CommandTFlush<CR>:CommandT<CR>
+nnoremap <Leader>f :FZF .<CR>
 map <leader>/   <plug>NERDCommenterToggle
-map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
-map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
-map <MiddleMouse>   <Nop>
-imap <MiddleMouse>  <Nop>
-map <leader>u :GundoToggle<CR>
+map <leader>, :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+map <leader>m :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 map Y yg_
+inoremap jk <Esc>
+
+vmap <C-c> "*y
+nmap <C-p> "*p
+
+nmap <C-]> gt
+nmap <C-[> gT
+nnoremap tt :tabnew<CR>
+nnoremap tc :tabclose<CR>
+nnoremap to :tabonly<CR>
 
 au FocusLost * silent! wa
 
 syntax enable
 set background=dark
-let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 colorscheme solarized
 
 set vb    " Silence audio notifications
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 autocmd BufReadPost .git/index set nolist
-
-let g:gundo_close_on_revert = 1
 
 autocmd BufRead,BufNewFile *.json set filetype=javascript
 
@@ -93,7 +93,7 @@ set guicursor=a:blinkon0           " Turn off the blinking cursor
 
 set notimeout                      " No command timeout
 set showcmd                        " Show typed command prefixes while waiting for operator
-set mouse=a                        " Use mouse support in XTerm/iTerm.
+" set mouse=a                        " Use mouse support in XTerm/iTerm.
 
 set expandtab                      " Use soft tabs
 set tabstop=2                      " Tab settings
@@ -138,12 +138,21 @@ set autowriteall                   " Save when doing various buffer-switching th
 autocmd BufLeave,FocusLost * silent! wall
 
 if $TERM == 'screen-256color'
-  set t_RV=[>c
+  set t_RV=[>c
 endif
 
-let g:CommandTWildIgnore=&wildignore . ",node_modules/**/*,vendor/assets/components/**/*,public/**/*"
-let g:CommandTMaxHeight=15
-let g:CommandTMatchWindowReverse=0
+" FZF
+set rtp+=/usr/local/opt/fzf
+let g:fzf_layout = { 'down': '~25%' }
+
+" Goyo
+noremap <Leader>gy :Goyo<CR>
+noremap <Leader>gg :Goyo!<CR>
+let g:goyo_width = 130
+let g:goyo_height = '95%'
+
+" Ack vim
+let g:ackprg = 'ag --vimgrep'
 
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8 " Necessary to show unicode glyphs
@@ -162,8 +171,6 @@ runtime macros/matchit.vim
 highlight clear SignColumn
 call gitgutter#highlight#define_highlights()
 
-let g:ackprg = 'ag --vimgrep'
-
 let g:rails_projections = {
   \ "frontend/javascripts/app/*.js": {
   \   "alternate": "spec/javascripts/{}_spec.js"
@@ -179,6 +186,8 @@ let g:rails_projections = {
   \}}
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = {'mode': 'active'}
 
 " Define a command to make it easier to use
 command! -nargs=+ QFDo call QFDo(<q-args>)
@@ -190,7 +199,7 @@ function! QFDo(command)
     " list of lines in buffers (easy way
     " to get unique entries)
     let buffer_numbers = {}
-    " For each entry, use the buffer number as 
+    " For each entry, use the buffer number as
     " a dictionary key (won't get repeats)
     for fixlist_entry in getqflist()
         let buffer_numbers[fixlist_entry['bufnr']] = 1
